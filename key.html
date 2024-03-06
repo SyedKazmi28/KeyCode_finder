@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+          text-align: center;
+        }
+        table{
+            margin: auto;
+            margin-top: 10rem;
+        }
+        td,th{
+          font-size: large;
+          text-align: center;  
+          padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Press any key to find KeyCode and Code</h2>
+    <div class="insert">
+       <table border="2px">
+        <tr>
+            <th>key</th>
+            <th>KeyCode</th>
+            <th>Code</th>
+        </tr>
+        <tr>
+            <td class="key"></td>
+            <td class="keyCode"></td>
+            <td class="code"></td>
+        </tr>
+       </table>
+    </div>
+</body>
+<script>
+    let insert = document.getElementById('insert')
+    window.addEventListener('keydown',(e)=>{
+       document.querySelector('.key').innerHTML = e.key
+       if(e.key === " "){
+        document.querySelector('.key').innerHTML = `space`
+       }
+       document.querySelector('.keyCode').innerHTML = e.keyCode
+       document.querySelector('.code').innerHTML = e.code
+    })
+</script>
+</html>
